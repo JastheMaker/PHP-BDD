@@ -35,3 +35,15 @@ ALTER table departments
 ALTER table profs
     DROP CONSTRAINT profs_ibfk_1;
 
+-- add Constraint with names
+
+ALTER TABLE profs
+    ADD CONSTRAINT FK_P_D
+    FOREIGN KEY (D_Id) REFERENCES departments (D_Id)
+    ON DELETE SET NULL;
+
+ALTER TABLE departments
+    ADD CONSTRAINT FK_D_P
+    FOREIGN KEY (TLp_Id) REFERENCES departments (P_Id)
+    ON DELETE SET NULL;
+
