@@ -29,7 +29,9 @@ CREATE TABLE IF NOT EXISTS Departments (
 
 --Delete a foreign key
 
-ALTER table departments DROP CONSTRAINT departments_ibfk_1;
+ALTER table departments
+    DROP CONSTRAINT departments_ibfk_1;
 
-ALTER table profs DROP CONSTRAINT profs_ibfk_1;
+ALTER table profs
+    DROP CONSTRAINT profs_ibfk_1;
 
